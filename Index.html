@@ -3,61 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <title>capturebyhs | Sim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<!-- NAVBAR -->
+<nav>
   <h1>capturebyhs</h1>
-  <p>Photography by Sim</p>
-</header>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>Capture Moments. Create Memories.</h2>
-  <a href="#contact" class="btn">Book a Shoot</a>
-</section>
-
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    Hi, I’m Sim — a passionate photographer capturing real emotions and timeless memories.
-    Based in Canada, I specialize in portraits, lifestyle, and creative shoots.
-  </p>
-</section>
-
-<section class="portfolio">
-  <h2>Portfolio</h2>
-  <div class="gallery">
-    <img src="images/photo1.jpg">
-    <img src="images/photo2.jpg">
-    <img src="images/photo3.jpg">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h2>Capture Moments.<br>Create Memories.</h2>
+    <p>Photography by Sim</p>
+    <a href="#contact" class="btn">Book Now</a>
   </div>
 </section>
 
-<section class="services">
+<!-- ABOUT -->
+<section id="about" class="about fade-in">
+  <h2>About Me</h2>
+  <p>
+    I'm Sim, the creative behind capturebyhs. I specialize in capturing authentic,
+    emotional, and timeless visuals that tell your story. Every shoot is designed
+    to make you feel confident and look your best.
+  </p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio fade-in">
+  <h2>My Work</h2>
+  <div class="grid">
+    <img src="images/photo1.jpg">
+    <img src="images/photo2.jpg">
+    <img src="images/photo3.jpg">
+    <img src="images/photo4.jpg">
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services fade-in">
   <h2>Services</h2>
-  <ul>
-    <li>Basic Shoot – 1 Hour / 10 Photos</li>
-    <li>Standard Shoot – 2 Hours / 20 Photos</li>
-    <li>Premium Shoot – 3+ Hours / 40 Photos</li>
-  </ul>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>1 Hour Shoot</p>
+      <p>10 Edited Photos</p>
+    </div>
+
+    <div class="card">
+      <h3>Standard</h3>
+      <p>2 Hour Shoot</p>
+      <p>20 Edited Photos</p>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <p>3+ Hour Shoot</p>
+      <p>40+ Edited Photos</p>
+    </div>
+  </div>
 </section>
 
-<section class="instagram">
+<!-- INSTAGRAM -->
+<section class="instagram fade-in">
   <h2>Instagram</h2>
-  <p>Follow me @capturebyhs</p>
-  <a href="https://instagram.com/capturebyhs" target="_blank">Visit Instagram</a>
+  <p>@capturebyhs</p>
+  <a href="https://instagram.com/capturebyhs" target="_blank" class="btn">View Profile</a>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
+<!-- CONTACT -->
+<section id="contact" class="contact fade-in">
+  <h2>Book a Shoot</h2>
+
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell me about your shoot..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 capturebyhs | Sim</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
