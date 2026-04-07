@@ -6,7 +6,6 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 nav h1 { font-size:1.5rem; }
 nav ul { display:flex; gap:15px; list-style:none; }
 nav a { color:white; text-decoration:none; font-size:1rem; }
-@media(max-width:768px){ nav ul{ display:none; } nav h1{ font-size:1.2rem; } }
 
 /* HERO */
 .hero { height:100vh; background:url('images/hero.jpg') center/cover no-repeat; position:relative; }
