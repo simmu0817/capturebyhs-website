@@ -2,167 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>capturebyhs | Sim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CaptureByHS Photography</title>
-  <style>
-    /* Reset & base styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    /* Header & Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      border-bottom: 1px solid #ccc;
-    }
-
-    header h1 { font-size: 2rem; color: #222; }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li {
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    nav ul li:hover { color: #007bff; }
-
-    /* Hamburger menu for mobile */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: #333;
-      margin: 4px 0;
-    }
-
-    /* Hero section */
-    .hero {
-      margin: 40px 0;
-      text-align: center;
-    }
-
-    .hero img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .hero h2 { margin-top: 20px; font-size: 2rem; }
-
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      border-top: 1px solid #ccc;
-      margin-top: 40px;
-    }
-
-    /* Media Queries for Tablet */
-    @media (max-width: 1024px) {
-      header h1 { font-size: 1.8rem; }
-      .hero h2 { font-size: 1.5rem; }
-    }
-
-    /* Media Queries for Mobile */
-    @media (max-width: 767px) {
-      nav ul { display: none; }
-      .hamburger { display: flex; }
-    }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header>
-      <h1>CaptureByHS</h1>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Gallery</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-      <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="https://via.placeholder.com/1200x500" alt="Photography Showcase">
-      <h2>Capturing Moments, Creating Memories</h2>
-    </section>
+<nav>
+  <h1>capturebyhs</h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Gallery -->
-    <section class="gallery">
-      <img src="https://via.placeholder.com/400x400" alt="Gallery Image 1">
-      <img src="https://via.placeholder.com/400x400" alt="Gallery Image 2">
-      <img src="https://via.placeholder.com/400x400" alt="Gallery Image 3">
-      <img src="https://via.placeholder.com/400x400" alt="Gallery Image 4">
-      <img src="https://via.placeholder.com/400x400" alt="Gallery Image 5">
-      <img src="https://via.placeholder.com/400x400" alt="Gallery Image 6">
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      &copy; 2026 CaptureByHS. All rights reserved.
-    </footer>
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h2>Capture Moments.<br>Create Memories.</h2>
+    <p>Photography by Sim</p>
+    <a href="#contact" class="btn">Book Now</a>
   </div>
+</section>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('nav ul');
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.gap = '10px';
-      nav.style.background = '#f5f5f5';
-      nav.style.padding = '10px';
-      nav.style.borderRadius = '5px';
-    }
-  </script>
+<section id="about" class="about fade-in">
+  <h2>About Me</h2>
+  <p>
+    I'm Sim — the creative behind capturebyhs. I specialize in capturing authentic, emotional, and timeless visuals that tell your story.
+  </p>
+</section>
+
+<section id="portfolio" class="portfolio fade-in">
+  <h2>My Work</h2>
+  <div class="grid">
+    <img src="images/photo1.jpg" alt="Portfolio 1">
+    <img src="images/photo2.jpg" alt="Portfolio 2">
+    <img src="images/photo3.jpg" alt="Portfolio 3">
+    <img src="images/photo4.jpg" alt="Portfolio 4">
+  </div>
+</section>
+
+<section id="services" class="services fade-in">
+  <h2>Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>1 Hour Session</p>
+      <p>10 Edited Photos</p>
+    </div>
+    <div class="card">
+      <h3>Standard</h3>
+      <p>2 Hour Session</p>
+      <p>20 Edited Photos</p>
+    </div>
+    <div class="card">
+      <h3>Premium</h3>
+      <p>3+ Hours</p>
+      <p>40+ Edited Photos</p>
+    </div>
+  </div>
+</section>
+
+<section class="instagram fade-in">
+  <h2>Instagram</h2>
+  <p>@capturebyhs</p>
+  <a href="https://instagram.com/capturebyhs" target="_blank" class="btn">View Profile</a>
+</section>
+
+<section id="contact" class="contact fade-in">
+  <h2>Book a Shoot</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell me about your shoot..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 capturebyhs | Sim</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
