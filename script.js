@@ -1,5 +1,4 @@
 const elements = document.querySelectorAll('.fade-in');
-
 window.addEventListener('scroll', () => {
   elements.forEach(el => {
     const position = el.getBoundingClientRect().top;
