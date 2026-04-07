@@ -7,3 +7,11 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+const form = document.querySelector("form");
+
+form.addEventListener("submit", () => {
+  setTimeout(() => {
+    alert("✅ Booking request sent! We’ll contact you soon.");
+  }, 500);
+});
+
