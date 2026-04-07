@@ -1,12 +1,18 @@
-const elements = document.querySelectorAll('.fade-in');
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const position = el.getBoundingClientRect().top;
-    if(position < window.innerHeight - 100){
-      el.classList.add('show');
+// Fade animation
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
     }
   });
 });
+
+faders.forEach(el => observer.observe(el));
+
+
+// Success message after form submit
 const form = document.querySelector("form");
 
 form.addEventListener("submit", () => {
@@ -14,4 +20,3 @@ form.addEventListener("submit", () => {
     alert("✅ Booking request sent! We’ll contact you soon.");
   }, 500);
 });
-
