@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>capturebyhs | Sim</title>
+  <title>CaptureByHS | Sim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <h1>capturebyhs</h1>
+  <h1>CaptureByHS</h1>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#portfolio">Work</a></li>
@@ -20,6 +24,7 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
@@ -29,22 +34,25 @@
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="about fade-in">
   <h2>About Me</h2>
   <p>
-    I'm Sim — the creative behind capturebyhs. I specialize in capturing authentic, emotional, and timeless visuals that tell your story.
+    I'm Sim — the creative behind CaptureByHS. I specialize in capturing authentic, emotional, and timeless visuals that tell your story.
   </p>
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio" class="portfolio fade-in">
   <h2>My Work</h2>
   <div class="grid">
-    <img src="images/photo1.jpg" alt="Portfolio 1">
-    <img src="images/photo2.jpg" alt="Portfolio 2">
-    <img src="images/photo3.jpg" alt="Portfolio 3">
+    <img src="images/photo1.jpg">
+    <img src="images/photo2.jpg">
+    <img src="images/photo3.jpg">
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="services fade-in">
   <h2>Services</h2>
   <div class="cards">
@@ -66,45 +74,44 @@
   </div>
 </section>
 
+<!-- INSTAGRAM -->
 <section class="instagram fade-in">
   <h2>Instagram</h2>
   <p>@capturebyhs</p>
   <a href="https://instagram.com/capturebyhs" target="_blank" class="btn">View Profile</a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact fade-in">
   <h2>Book a Shoot</h2>
+
   <form action="https://formspree.io/f/xbdpwqol" method="POST">
 
-  <!-- Email subject -->
-  <input type="hidden" name="_subject" value="New Booking Request - CaptureByHS">
+    <input type="hidden" name="_subject" value="New Booking Request - CaptureByHS">
 
-  <!-- Redirect after submit (optional) -->
-  <input type="hidden" name="_next" value="https://capturebyhs.ca/thankyou.html">
+    <input type="text" name="name" placeholder="Your Name" required>
 
-  <!-- User fields -->
-  <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-  <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Phone Number">
 
-  <input type="tel" name="phone" placeholder="Phone Number">
+    <input type="text" name="shoot_type" placeholder="Type of Shoot (Portrait, Event, etc.)">
 
-  <input type="text" name="shoot_type" placeholder="Type of Shoot (Portrait, Event, Car, etc.)">
+    <input type="date" name="date">
 
-  <input type="date" name="date">
+    <textarea name="message" placeholder="Tell me about your shoot..." required></textarea>
 
-  <textarea name="message" placeholder="Tell me about your shoot..." required></textarea>
+    <button type="submit">Send Booking Request</button>
 
-  <button type="submit">Send Booking Request</button>
-
-</form>
-
+  </form>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 capturebyhs | Sim</p>
+  <p>© 2026 CaptureByHS | Sim</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
