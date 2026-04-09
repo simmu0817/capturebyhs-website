@@ -1,158 +1,148 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
-  background: #0f0f0f;
-  color: #fff;
-  line-height: 1.6;
+  font-family: 'Signika', sans-serif;
+  overflow-x: hidden;
 }
 
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  position: fixed;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(12px);
+/* SMOOTH FADE-IN */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
 }
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url('images/hero.jpg') center/cover no-repeat;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h2 {
-  font-size: 3rem;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: white;
-  color: black;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-/* SECTIONS */
+/* GLOBAL CONTAINER FIX */
 section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-/* PORTFOLIO */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.grid img {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: 0.3s;
 }
 
-.grid img:hover {
-  transform: scale(1.05);
-}
-
-/* SERVICES */
-.cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 15px;
-  width: 240px;
-}
-
-.card:nth-child(3) {
-  border: 2px solid gold;
-}
-
-/* FORM */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-}
-
+/* FIX ALL BUTTONS */
+a,
 button {
-  padding: 14px;
-  background: white;
-  border-radius: 30px;
   cursor: pointer;
 }
 
-/* ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
+/* PRIMARY BUTTON STYLE */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+
+  background: white;
+  color: black;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
 }
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
+/* BUTTON HOVER */
+.btn:hover {
+  background: #e5e5e5;
+  transform: scale(1.05);
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  nav ul {
-    display:none;
+/* BUTTON CLICK */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* CENTER BUTTON WRAPPER */
+.btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* HERO SECTION FIX */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAVBAR FIX */
+header {
+  width: 100%;
+}
+
+/* NAV LINKS */
+nav a {
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* IMAGE HOVER EFFECT (PORTFOLIO) */
+img {
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* GALLERY FIX */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FIX FLEX WRAPPING ISSUES */
+.flex-wrap-fix {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 15px;
   }
-  .hero h2 {
-    font-size:2rem;
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: auto;
+    padding: 10px 20px;
   }
 }
