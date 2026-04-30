@@ -73,9 +73,9 @@ window.addEventListener('scroll', () => {
 });
 
 // ==========================================
-// SCROLL REVEAL ANIMATION
+// SCROLL REVEAL ANIMATION (FIXED)
 // ==========================================
-const revealElements = document.querySelectorAll('.portfolio-item, .service-card, .about, .contact-card, .testimonial-card');
+const revealElements = document.querySelectorAll('.service-card, .contact-card, .testimonial-card');
 
 const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
@@ -88,10 +88,33 @@ const revealOnScroll = () => {
             element.classList.add('reveal', 'active');
         }
     });
+    
+    // Ensure portfolio and about sections are always visible
+    const portfolioSection = document.querySelector('.portfolio');
+    const aboutSection = document.querySelector('.about');
+    
+    if (portfolioSection) {
+        portfolioSection.style.opacity = '1';
+        portfolioSection.style.transform = 'none';
+    }
+    
+    if (aboutSection) {
+        aboutSection.style.opacity = '1';
+        aboutSection.style.transform = 'none';
+    }
 };
 
 // Initial check on page load
-window.addEventListener('load', revealOnScroll);
+window.addEventListener('load', () => {
+    revealOnScroll();
+    
+    // Force portfolio items to be visible
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+    });
+});
 
 // Check on scroll with debounce
 let scrollTimeout;
@@ -123,7 +146,7 @@ scrollToTopBtn.addEventListener('click', () => {
 });
 
 // ==========================================
-// PARALLAX EFFECT FOR HERO
+// PARALLAX EFFECT FOR HERO (FIXED - ONLY HERO SECTION)
 // ==========================================
 const hero = document.querySelector('.hero');
 const heroContent = document.querySelector('.hero-content');
@@ -134,8 +157,14 @@ window.addEventListener('scroll', () => {
     
     // Only apply parallax while hero is visible
     if (scrolled < heroHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / heroHeight);
+        heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
+        // Reduced opacity fade - keeps content visible longer
+        const opacityValue = Math.max(0.3, 1 - (scrolled / (heroHeight * 0.8)));
+        heroContent.style.opacity = opacityValue;
+    } else {
+        // Reset when past hero section
+        heroContent.style.transform = 'translateY(0)';
+        heroContent.style.opacity = '1';
     }
 });
 
