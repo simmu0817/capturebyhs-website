@@ -961,7 +961,7 @@
     <nav class="navigation">
         <div class="nav-container">
             <a href="#home" class="brand">
-                <img src="Logo.jpg" alt="Capture by HS Logo" class="brand-logo">
+                <img src="Logo.jpg" alt="Capture by HS Logo" class="brand-logo" onerror="this.style.display='none'">
                 <div class="brand-text">
                     <div class="brand-name">CAPTURE BY HS</div>
                     <div class="brand-tagline">Photography</div>
@@ -1238,7 +1238,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="Logo.jpg" alt="Capture by HS">
+                <img src="Logo.jpg" alt="Capture by HS" onerror="this.style.display='none'">
                 <p class="footer-description">
                     Professional photography services in Toronto, specializing in weddings, 
                     portraits, and events. Creating timeless memories since 2019.
@@ -1342,6 +1342,28 @@
         console.log('%c📸 CAPTURE BY HS', 'font-size: 24px; font-weight: bold; color: #C9A86A; font-family: Cormorant Garamond, serif;');
         console.log('%c✨ Premium Photography Website', 'font-size: 14px; color: #b8b8b8;');
         console.log('%c📍 Toronto, Canada | 📧 info@capturebyhs.ca | 📱 +1 (647) 354-6822', 'font-size: 12px; color: #6a6a6a;');
+
+        // ===== IMAGE LOADING CHECK =====
+        window.addEventListener('load', () => {
+            const images = document.querySelectorAll('img');
+            let loaded = 0;
+            let failed = 0;
+            
+            images.forEach(img => {
+                if (img.complete && img.naturalHeight !== 0) {
+                    loaded++;
+                } else {
+                    failed++;
+                    console.warn('Failed to load:', img.src);
+                }
+            });
+            
+            console.log(`%c✅ Images loaded: ${loaded}`, 'color: #4CAF50; font-weight: bold;');
+            if (failed > 0) {
+                console.warn(`%c⚠️ Images failed: ${failed}`, 'color: #FF9800; font-weight: bold;');
+                console.log('%cℹ️ Make sure Logo.jpg, profile.jpg, and photo1-4.jpg are in the same folder as index.html', 'color: #2196F3;');
+            }
+        });
     </script>
 </body>
 </html>
