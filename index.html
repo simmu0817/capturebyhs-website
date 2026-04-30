@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Capture by HS - Professional Photography by Sim in Montreal. Specializing in weddings, portraits, and events.">
-    <title>Capture by HS | Photography by Sim</title>
+    <meta name="description" content="Capture by HS - Professional Photography by Sim in Toronto. Specializing in weddings, portraits, and events.">
+    <title>Capture by HS | Professional Photography in Toronto</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="Logo.jpg">
@@ -12,27 +12,19 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loader" class="loader">
-        <div class="loader-content">
-            <div class="camera-icon">📸</div>
-            <p>Loading...</p>
-        </div>
-    </div>
-
     <!-- Header / Navigation -->
     <header id="header">
         <a href="#home" class="logo-container">
             <img src="Logo.jpg" alt="Capture by HS Logo" class="logo-img">
             <div class="logo-text">
                 <span class="brand">CAPTURE BY HS</span>
-                <span class="tagline">Photography</span>
+                <span class="tagline">Professional Photography</span>
             </div>
         </a>
         
@@ -54,223 +46,335 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Improved Professional Landing -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="subtitle">Welcome to</p>
-            <h1>Capture by HS</h1>
-            <p class="description">Your moments, beautifully preserved</p>
-            <a href="#portfolio" class="cta-button">View My Work</a>
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
         </div>
-        <!-- Scroll Indicator -->
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Toronto's Premier Photography</span>
+                <h1 class="hero-title">Capture by HS</h1>
+                <p class="hero-description">Creating timeless memories through the art of photography. Specializing in weddings, portraits, and life's most precious moments.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📸</span>
+                        <span class="feature-text">Professional Quality</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span class="feature-text">Fast Delivery</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">❤️</span>
+                        <span class="feature-text">Passionate Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow">↓</div>
+            <span>Scroll to explore</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="section-header">
-            <h2 class="section-title">My Portfolio</h2>
-            <p class="section-subtitle">Recent Projects</p>
-        </div>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-item" data-category="wedding">
-                <img src="photo1.jpg" alt="Winter Wedding Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Winter Romance</h3>
-                    <p>Wedding Photography</p>
-                </div>
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Work</span>
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-description">A collection of my recent photography projects</p>
             </div>
             
-            <div class="portfolio-item" data-category="engagement">
-                <img src="photo2.jpg" alt="Engagement Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Vibrant Love</h3>
-                    <p>Engagement Session</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="photo1.jpg" alt="Winter Wedding Photography">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Winter Romance</h3>
+                        <p>Wedding Photography</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="portfolio-item" data-category="portrait">
-                <img src="photo4.jpg" alt="Portrait Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Style & Elegance</h3>
-                    <p>Portrait Session</p>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="photo2.jpg" alt="Engagement Photography">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Vibrant Love</h3>
+                        <p>Engagement Session</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="portfolio-item" data-category="wedding">
-                <img src="photo3.jpg" alt="Wedding Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Perfect Moments</h3>
-                    <p>Wedding Day</p>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="photo4.jpg" alt="Portrait Photography">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Style & Elegance</h3>
+                        <p>Portrait Session</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="photo3.jpg" alt="Wedding Photography">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Perfect Moments</h3>
+                        <p>Wedding Day</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-image-wrapper">
-            <div class="about-image">
-                <img src="photo4.jpg" alt="Sim - Professional Photographer" loading="lazy">
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Sim - Professional Photographer">
+                    <div class="about-badge">
+                        <span class="badge-icon">📸</span>
+                        <span class="badge-text">Professional Photographer</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title">Hi, I'm Sim</h2>
+                    <p class="about-text">I'm a passionate photographer based in <strong>Toronto, Canada</strong>, dedicated to capturing life's most beautiful moments through my lens.</p>
+                    
+                    <p class="about-text">Whether it's your wedding day, a family celebration, or a professional portrait session, I bring creativity, professionalism, and attention to detail to every shoot.</p>
+                    
+                    <p class="about-text">My goal is to create stunning images that you'll treasure for a lifetime, telling your unique story with authenticity and artistry.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Events Covered</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary">Work With Me</a>
+                </div>
             </div>
-        </div>
-        
-        <div class="about-content">
-            <span class="highlight">Meet the Photographer</span>
-            <h2>Hi, I'm Sim</h2>
-            <p>I'm an aspiring photographer based in Montreal, passionate about capturing beautiful moments and telling stories through my lens.</p>
-            <p>Whether it's your special day, a family gathering, or a personal portrait session, I'm here to make sure your memories are preserved in the most beautiful way possible.</p>
-            <p>I'm just starting my journey in professional photography, and I'd love to work with you to create stunning images that you'll treasure forever.</p>
-            
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number" data-target="50">0</span>
-                    <span class="stat-label">Happy Clients</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="30">0</span>
-                    <span class="stat-label">Events Covered</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="100">0</span>
-                    <span class="stat-label">Passion %</span>
-                </div>
-            </div>
-            
-            <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="section-header">
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">What I Offer</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">💍</div>
-                <h3>Wedding Photography</h3>
-                <p>Capture every beautiful moment of your special day with professional photography that tells your love story.</p>
-                <div class="service-price">Starting at $800</div>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Offer</span>
+                <h2 class="section-title">Services</h2>
+                <p class="section-description">Professional photography packages tailored to your needs</p>
             </div>
             
-            <div class="service-card">
-                <div class="service-icon">❤️</div>
-                <h3>Engagement Sessions</h3>
-                <p>Beautiful couple photography in stunning Montreal locations to celebrate your love and journey together.</p>
-                <div class="service-price">Starting at $350</div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">📸</div>
-                <h3>Portrait Photography</h3>
-                <p>Professional portraits that showcase your personality, perfect for individuals, families, and professionals.</p>
-                <div class="service-price">Starting at $250</div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🎉</div>
-                <h3>Event Photography</h3>
-                <p>Coverage for birthdays, parties, and special celebrations with creative and candid photography.</p>
-                <div class="service-price">Starting at $400</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💍</div>
+                    <h3 class="service-title">Wedding Photography</h3>
+                    <p class="service-description">Capture every beautiful moment of your special day with complete coverage and artistic storytelling.</p>
+                    <div class="service-price">From $800</div>
+                    <ul class="service-features">
+                        <li>✓ Full day coverage</li>
+                        <li>✓ Professional editing</li>
+                        <li>✓ Online gallery</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="featured-badge">Popular</div>
+                    <div class="service-icon">❤️</div>
+                    <h3 class="service-title">Engagement Sessions</h3>
+                    <p class="service-description">Celebrate your love story with romantic couple photography in beautiful Toronto locations.</p>
+                    <div class="service-price">From $350</div>
+                    <ul class="service-features">
+                        <li>✓ 1-2 hour session</li>
+                        <li>✓ Location scouting</li>
+                        <li>✓ Digital images</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📸</div>
+                    <h3 class="service-title">Portrait Photography</h3>
+                    <p class="service-description">Professional portraits that showcase your personality and style for individuals and families.</p>
+                    <div class="service-price">From $250</div>
+                    <ul class="service-features">
+                        <li>✓ Studio or outdoor</li>
+                        <li>✓ Multiple outfits</li>
+                        <li>✓ Retouched photos</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3 class="service-title">Event Photography</h3>
+                    <p class="service-description">Coverage for birthdays, corporate events, and special celebrations with candid moments.</p>
+                    <div class="service-price">From $400</div>
+                    <ul class="service-features">
+                        <li>✓ Event coverage</li>
+                        <li>✓ Candid & posed shots</li>
+                        <li>✓ Quick turnaround</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="section-header">
-            <h2 class="section-title">What Clients Say</h2>
-            <p class="section-subtitle">Testimonials</p>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Sim captured our wedding day perfectly! The photos are absolutely stunning and we couldn't be happier."</p>
-                <p class="testimonial-author">- Sarah & Mike</p>
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Client Reviews</span>
+                <h2 class="section-title">What People Say</h2>
             </div>
             
-            <div class="testimonial-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Professional, creative, and so easy to work with. Our family portraits turned out amazing!"</p>
-                <p class="testimonial-author">- The Johnsons</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Highly recommend! Sim made us feel comfortable and the engagement photos are beautiful."</p>
-                <p class="testimonial-author">- Priya & Raj</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Sim captured our wedding day perfectly! The photos are absolutely stunning and we couldn't be happier with the results. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Sarah & Mike</strong>
+                            <span>Wedding in Toronto</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Professional, creative, and so easy to work with. Our family portraits turned out amazing! Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>The Johnson Family</strong>
+                            <span>Portrait Session</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Sim made us feel so comfortable during our engagement shoot. The photos are beautiful and captured our personalities perfectly."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Priya & Raj</strong>
+                            <span>Engagement Session</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-header">
-            <span class="highlight">Get In Touch</span>
-            <h2 class="section-title">Let's Create Together</h2>
-            <p>I'd love to hear about your photography needs. Reach out and let's make something beautiful!</p>
-        </div>
-        
-        <div class="contact-info">
-            <div class="contact-card">
-                <div class="contact-icon">📧</div>
-                <h3>Email</h3>
-                <a href="mailto:info@capturebyhs.ca">info@capturebyhs.ca</a>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-section">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Let's Create Together</h2>
+                    <p class="contact-description">Ready to book your photography session? I'd love to hear about your vision and help bring it to life.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:+16473546822" class="contact-method">
+                            <div class="method-icon">📱</div>
+                            <div class="method-info">
+                                <span class="method-label">Phone</span>
+                                <span class="method-value">+1 (647) 354-6822</span>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:info@capturebyhs.ca" class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">info@capturebyhs.ca</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://wa.me/16473546822" target="_blank" class="contact-method">
+                            <div class="method-icon">💬</div>
+                            <div class="method-info">
+                                <span class="method-label">WhatsApp</span>
+                                <span class="method-value">Message Me</span>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-info">
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Toronto, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://instagram.com/capturebyhs" target="_blank" class="social-link">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://facebook.com/capturebyhs" target="_blank" class="social-link">
+                            <span>📘</span>
+                        </a>
+                        <a href="mailto:info@capturebyhs.ca" class="social-link">
+                            <span>✉️</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">📱</div>
-                <h3>Phone</h3>
-                <a href="tel:+16473546822">+1 (647) 354-6822</a>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">💬</div>
-                <h3>WhatsApp</h3>
-                <a href="https://wa.me/16473546822" target="_blank">Message Me</a>
-            </div>
-        </div>
-        
-        <div class="social-links">
-            <a href="https://instagram.com/capturebyhs" target="_blank" class="social-link" aria-label="Instagram">
-                <span>📷</span>
-            </a>
-            <a href="https://facebook.com/capturebyhs" target="_blank" class="social-link" aria-label="Facebook">
-                <span>📘</span>
-            </a>
-            <a href="mailto:info@capturebyhs.ca" class="social-link" aria-label="Email">
-                <span>✉️</span>
-            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <img src="Logo.jpg" alt="Capture by HS" class="logo-footer">
-        <p>&copy; 2024 Capture by HS | Photography by Sim</p>
-        <p class="footer-location">Montreal, Canada</p>
-        <p class="footer-links">
-            <a href="#home">Home</a> | 
-            <a href="#portfolio">Portfolio</a> | 
-            <a href="#about">About</a> | 
-            <a href="#services">Services</a> | 
-            <a href="#contact">Contact</a>
-        </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Logo.jpg" alt="Capture by HS" class="footer-logo">
+                    <p class="footer-tagline">Professional Photography in Toronto</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Capture by HS. All rights reserved. | Photography by Sim | Toronto, Canada</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
-        ↑
-    </button>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
