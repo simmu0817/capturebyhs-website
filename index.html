@@ -1,121 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CaptureByHS | Sim</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Capture by HS - Professional Photography by Sim in Montreal. Specializing in weddings, portraits, and events.">
+    <title>Capture by HS | Photography by Sim</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Header / Navigation -->
+    <header id="header">
+        <a href="#home" class="logo-container">
+            <img src="Logo.jpg" alt="Capture by HS Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand">CAPTURE BY HS</span>
+                <span class="tagline">Photography</span>
+            </div>
+        </a>
+        
+        <nav id="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
-<!-- NAV -->
-<nav>
-  <h1>CaptureByHS</h1>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Work</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="subtitle fade-in">Welcome to</p>
+            <h1 class="fade-in-up">Capture by HS</h1>
+            <p class="description fade-in-up">Your moments, beautifully preserved</p>
+            <a href="#portfolio" class="cta-button fade-in-up">View My Work</a>
+        </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h2>Capture Moments.<br>Create Memories.</h2>
-    <p>Photography by Sim</p>
-    <div class="btn-center">
-      <a href="#contact" class="btn">Book Now</a>
-    </div>
-  </div>
-</section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <h2 class="section-title">My Portfolio</h2>
+            <p class="section-subtitle">Recent Projects</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="wedding">
+                <img src="photo1.jpg" alt="Winter Wedding Photography">
+                <div class="portfolio-overlay">
+                    <h3>Winter Romance</h3>
+                    <p>Wedding Photography</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" data-category="engagement">
+                <img src="photo2.jpg" alt="Engagement Photography">
+                <div class="portfolio-overlay">
+                    <h3>Vibrant Love</h3>
+                    <p>Engagement Session</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" data-category="portrait">
+                <img src="photo4.jpg" alt="Portrait Photography">
+                <div class="portfolio-overlay">
+                    <h3>Style & Elegance</h3>
+                    <p>Portrait Session</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" data-category="wedding">
+                <img src="photo3.jpg" alt="Wedding Photography">
+                <div class="portfolio-overlay">
+                    <h3>Perfect Moments</h3>
+                    <p>Wedding Day</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about" class="about fade-in">
-  <h2>About Me</h2>
-  <p>
-    I'm Sim — the creative behind CaptureByHS. I specialize in capturing authentic, emotional, and timeless visuals that tell your story.
-  </p>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-image-wrapper">
+            <div class="about-image">
+                <img src="photo4.jpg" alt="Sim - Professional Photographer">
+            </div>
+        </div>
+        
+        <div class="about-content">
+            <span class="highlight">Meet the Photographer</span>
+            <h2>Hi, I'm Sim</h2>
+            <p>I'm an aspiring photographer based in Montreal, passionate about capturing beautiful moments and telling stories through my lens.</p>
+            <p>Whether it's your special day, a family gathering, or a personal portrait session, I'm here to make sure your memories are preserved in the most beautiful way possible.</p>
+            <p>I'm just starting my journey in professional photography, and I'd love to work with you to create stunning images that you'll treasure forever.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Events Covered</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Passion</span>
+                </div>
+            </div>
+            
+            <a href="#contact" class="cta-button">Let's Work Together</a>
+        </div>
+    </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio fade-in">
-  <h2>My Work</h2>
-  <div class="grid">
-    <img src="images/photo1.jpg" alt="Portfolio Photo 1">
-    <img src="images/photo2.jpg" alt="Portfolio Photo 2">
-    <img src="images/photo3.jpg" alt="Portfolio Photo 3">
-  </div>
-</section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">What I Offer</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💍</div>
+                <h3>Wedding Photography</h3>
+                <p>Capture every beautiful moment of your special day with professional photography that tells your love story.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">❤️</div>
+                <h3>Engagement Sessions</h3>
+                <p>Beautiful couple photography in stunning Montreal locations to celebrate your love and journey together.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📸</div>
+                <h3>Portrait Photography</h3>
+                <p>Professional portraits that showcase your personality, perfect for individuals, families, and professionals.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎉</div>
+                <h3>Event Photography</h3>
+                <p>Coverage for birthdays, parties, and special celebrations with creative and candid photography.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- SERVICES -->
-<section id="services" class="services fade-in">
-  <h2>Services</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Basic</h3>
-      <p>1 Hour Session</p>
-      <p>10 Edited Photos</p>
-    </div>
-    <div class="card">
-      <h3>Standard</h3>
-      <p>2 Hour Session</p>
-      <p>20 Edited Photos</p>
-    </div>
-    <div class="card">
-      <h3>Premium</h3>
-      <p>3+ Hours</p>
-      <p>40+ Edited Photos</p>
-    </div>
-  </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="highlight">Get In Touch</span>
+            <h2 class="section-title">Let's Create Together</h2>
+            <p>I'd love to hear about your photography needs. Reach out and let's make something beautiful!</p>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:info@capturebyhs.ca">info@capturebyhs.ca</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <a href="tel:+16473546822">+1 (647) 354-6822</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/16473546822" target="_blank">Message Me</a>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/capturebyhs" target="_blank" class="social-link" aria-label="Instagram">
+                <span>📷</span>
+            </a>
+            <a href="https://facebook.com/capturebyhs" target="_blank" class="social-link" aria-label="Facebook">
+                <span>📘</span>
+            </a>
+            <a href="mailto:info@capturebyhs.ca" class="social-link" aria-label="Email">
+                <span>✉️</span>
+            </a>
+        </div>
+    </section>
 
-<!-- INSTAGRAM -->
-<section class="instagram fade-in">
-  <h2>Instagram</h2>
-  <p>@capturebyhs</p>
-  <div class="btn-center">
-    <a href="https://instagram.com/capturebyhs" target="_blank" class="btn">View Profile</a>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer>
+        <img src="Logo.jpg" alt="Capture by HS" class="logo-footer">
+        <p>&copy; 2024 Capture by HS | Photography by Sim</p>
+        <p class="footer-location">Montreal, Canada</p>
+    </footer>
 
-<!-- CONTACT -->
-<section id="contact" class="contact fade-in">
-  <h2>Book a Shoot</h2>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        ↑
+    </button>
 
-  <form action="https://formspree.io/f/xbdpwqol" method="POST">
-
-    <input type="hidden" name="_subject" value="New Booking Request - CaptureByHS">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-
-    <input type="email" name="email" placeholder="Your Email" required>
-
-    <input type="tel" name="phone" placeholder="Phone Number">
-
-    <input type="text" name="shoot_type" placeholder="Type of Shoot (Portrait, Event, etc.)">
-
-    <input type="date" name="date">
-
-    <textarea name="message" placeholder="Tell me about your shoot..." required></textarea>
-
-    <button type="submit">Send Booking Request</button>
-
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 CaptureByHS | Sim</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
