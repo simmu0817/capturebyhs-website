@@ -384,6 +384,8 @@ nav a.active::after {
     padding: 6rem 4rem;
     max-width: 1400px;
     margin: 0 auto;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .section-header {
@@ -421,10 +423,12 @@ nav a.active::after {
     background: var(--card-bg);
     border-radius: 4px;
     transition: all var(--transition-speed) ease;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -434,6 +438,7 @@ nav a.active::after {
     object-fit: cover;
     object-position: center 20%;
     transition: all var(--transition-speed) ease;
+    opacity: 1 !important;
 }
 
 .portfolio-item:hover img {
@@ -499,6 +504,8 @@ nav a.active::after {
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .about-image {
@@ -534,6 +541,7 @@ nav a.active::after {
     object-position: center 30%;
     filter: grayscale(20%);
     transition: all var(--transition-speed) ease;
+    opacity: 1 !important;
 }
 
 .about-image:hover img {
