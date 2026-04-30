@@ -3,380 +3,1345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Capture by HS - Professional Photography by Sim in Toronto. Specializing in weddings, portraits, and events.">
-    <title>Capture by HS | Professional Photography in Toronto</title>
+    <meta name="description" content="Capture by HS - Award-winning photography in Toronto. Specializing in weddings, portraits, and events. Book your session today.">
+    <title>Capture by HS | Premium Photography Toronto</title>
+    <link rel="icon" href="Logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="Logo.jpg">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =====================================================
+           PROFESSIONAL PHOTOGRAPHY WEBSITE
+           Designer: Premium Quality
+           ===================================================== */
+
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #C9A86A;
+            --accent-light: #D4B876;
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8b8;
+            --text-muted: #6a6a6a;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* =====================================================
+           NAVIGATION - PREMIUM DESIGN
+           ===================================================== */
+
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1.5rem 0;
+        }
+
+        .navigation.scrolled {
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .brand:hover {
+            transform: translateY(-2px);
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(201, 168, 106, 0.3));
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 2px;
+        }
+
+        .brand-tagline {
+            font-size: 0.65rem;
+            color: var(--accent);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.75rem 1.75rem;
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 168, 106, 0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            width: 28px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* =====================================================
+           HERO SECTION - FULL SCREEN IMPACT
+           ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0a0a0a 100%);
+            overflow: hidden;
+        }
+
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px);
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(201, 168, 106, 0.15) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 0 4%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 0.875rem;
+            color: var(--accent);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.5rem, 10vw, 8rem);
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 2rem;
+            letter-spacing: -2px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        .hero-title span {
+            display: block;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        .btn {
+            padding: 1.2rem 3rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-light);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201, 168, 106, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--text-primary);
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.2s forwards;
+        }
+
+        .scroll-text {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            animation: scrollDown 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollDown {
+            0%, 100% { transform: translateY(0); opacity: 0; }
+            50% { transform: translateY(20px); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =====================================================
+           PORTFOLIO - MASONRY GRID LAYOUT
+           ===================================================== */
+
+        .portfolio {
+            padding: 8rem 4% 6rem;
+            background: var(--primary);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .section-label {
+            font-size: 0.875rem;
+            color: var(--accent);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            background: var(--secondary);
+            aspect-ratio: 3/4;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-item:hover .portfolio-image {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2.5rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-category {
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .portfolio-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* =====================================================
+           ABOUT - SPLIT LAYOUT
+           ===================================================== */
+
+        .about {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 2px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            box-shadow: 0 10px 40px rgba(201, 168, 106, 0.4);
+        }
+
+        .badge-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .badge-label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .about-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+        }
+
+        .about-content strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* =====================================================
+           SERVICES - CARD DESIGN
+           ===================================================== */
+
+        .services {
+            padding: 8rem 4%;
+            background: var(--primary);
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            padding: 3rem 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201, 168, 106, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .service-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 0.9375rem;
+        }
+
+        .service-price {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 0.9375rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 1rem;
+        }
+
+        /* =====================================================
+           CONTACT - PREMIUM LAYOUT
+           ===================================================== */
+
+        .contact {
+            padding: 8rem 4%;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .contact-label {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-value {
+            font-size: 1.25rem;
+            color: var(--accent);
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value:hover {
+            color: var(--accent-light);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent);
+            background: rgba(201, 168, 106, 0.1);
+            transform: translateY(-5px);
+        }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        footer {
+            background: var(--primary);
+            padding: 4rem 4% 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand img {
+            width: 60px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            font-size: 0.9375rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* =====================================================
+           SCROLL TO TOP
+           ===================================================== */
+
+        .scroll-top {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            width: 55px;
+            height: 55px;
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 9999;
+            box-shadow: 0 4px 20px rgba(201, 168, 106, 0.4);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--accent-light);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(201, 168, 106, 0.5);
+        }
+
+        /* =====================================================
+           RESPONSIVE DESIGN
+           ===================================================== */
+
+        @media (max-width: 1024px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 400px;
+                height: 100vh;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 8rem 3rem 3rem;
+                transition: right 0.4s ease;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .portfolio-grid,
+            .services-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header id="header">
-        <a href="#home" class="logo-container">
-            <img src="Logo.jpg" alt="Capture by HS Logo" class="logo-img">
-            <div class="logo-text">
-                <span class="brand">CAPTURE BY HS</span>
-                <span class="tagline">Professional Photography</span>
-            </div>
-        </a>
-        
-        <nav id="nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Mobile Menu Toggle -->
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <img src="Logo.jpg" alt="Capture by HS Logo" class="brand-logo">
+                <div class="brand-text">
+                    <div class="brand-name">CAPTURE BY HS</div>
+                    <div class="brand-tagline">Photography</div>
+                </div>
+            </a>
 
-    <!-- Hero Section - Improved Professional Landing -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Book Session</a></li>
+            </ul>
+
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-glow"></div>
         
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-subtitle">Toronto's Premier Photography</span>
-                <h1 class="hero-title">Capture by HS</h1>
-                <p class="hero-description">Creating timeless memories through the art of photography. Specializing in weddings, portraits, and life's most precious moments.</p>
-                
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-                
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">📸</span>
-                        <span class="feature-text">Professional Quality</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
-                        <span class="feature-text">Fast Delivery</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">❤️</span>
-                        <span class="feature-text">Passionate Service</span>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <div class="hero-subtitle">Toronto's Premier Photography Studio</div>
+            <h1 class="hero-title">
+                <span>Capture by HS</span>
+            </h1>
+            <p class="hero-description">
+                Creating timeless visual stories through the art of photography. 
+                Specializing in weddings, portraits, and life's most precious moments in Toronto.
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">My Work</span>
-                <h2 class="section-title">Portfolio</h2>
-                <p class="section-description">A collection of my recent photography projects</p>
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <span class="section-label">My Work</span>
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-description">
+                A curated collection of moments transformed into timeless memories
+            </p>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="photo1.jpg" alt="Wedding Photography" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-category">Wedding</div>
+                    <h3 class="portfolio-title">Winter Elegance</h3>
+                </div>
             </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="photo1.jpg" alt="Winter Wedding Photography">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Winter Romance</h3>
-                        <p>Wedding Photography</p>
-                    </div>
+
+            <div class="portfolio-item">
+                <img src="photo2.jpg" alt="Engagement Photography" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-category">Engagement</div>
+                    <h3 class="portfolio-title">Love Story</h3>
                 </div>
-                
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="photo2.jpg" alt="Engagement Photography">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Vibrant Love</h3>
-                        <p>Engagement Session</p>
-                    </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="photo4.jpg" alt="Portrait Photography" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-category">Portrait</div>
+                    <h3 class="portfolio-title">Professional Style</h3>
                 </div>
-                
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="photo4.jpg" alt="Portrait Photography">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Style & Elegance</h3>
-                        <p>Portrait Session</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="photo3.jpg" alt="Wedding Photography">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Perfect Moments</h3>
-                        <p>Wedding Day</p>
-                    </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="photo3.jpg" alt="Wedding Photography" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-category">Wedding</div>
+                    <h3 class="portfolio-title">Perfect Day</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="profile.jpg" alt="Sim - Professional Photographer">
-                    <div class="about-badge">
-                        <span class="badge-icon">📸</span>
-                        <span class="badge-text">Professional Photographer</span>
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <img src="profile.jpg" alt="Sim - Professional Photographer" class="about-image">
+                <div class="about-badge">
+                    <div class="badge-number">5+</div>
+                    <div class="badge-label">Years Experience</div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-label">About Me</span>
+                <h2>Hi, I'm Sim</h2>
+                <p>
+                    I'm a professional photographer based in <strong>Toronto, Canada</strong>, 
+                    passionate about capturing authentic moments and transforming them into 
+                    timeless visual stories.
+                </p>
+                <p>
+                    With over 5 years of experience in wedding photography, portraits, and 
+                    special events, I bring a unique blend of artistic vision and technical 
+                    expertise to every project. My approach focuses on natural moments, 
+                    genuine emotions, and creating images that you'll treasure for generations.
+                </p>
+                <p>
+                    Whether it's your wedding day, a milestone celebration, or a professional 
+                    portrait session, I'm committed to delivering exceptional results that 
+                    exceed your expectations.
+                </p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Events Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction</div>
                     </div>
                 </div>
-                
-                <div class="about-content">
-                    <span class="section-label">About Me</span>
-                    <h2 class="section-title">Hi, I'm Sim</h2>
-                    <p class="about-text">I'm a passionate photographer based in <strong>Toronto, Canada</strong>, dedicated to capturing life's most beautiful moments through my lens.</p>
-                    
-                    <p class="about-text">Whether it's your wedding day, a family celebration, or a professional portrait session, I bring creativity, professionalism, and attention to detail to every shoot.</p>
-                    
-                    <p class="about-text">My goal is to create stunning images that you'll treasure for a lifetime, telling your unique story with authenticity and artistry.</p>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Happy Clients</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">Events Covered</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Satisfaction</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn btn-primary">Work With Me</a>
-                </div>
+
+                <a href="#contact" class="btn btn-primary">Let's Work Together</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">What I Offer</span>
-                <h2 class="section-title">Services</h2>
-                <p class="section-description">Professional photography packages tailored to your needs</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💍</div>
-                    <h3 class="service-title">Wedding Photography</h3>
-                    <p class="service-description">Capture every beautiful moment of your special day with complete coverage and artistic storytelling.</p>
-                    <div class="service-price">From $800</div>
-                    <ul class="service-features">
-                        <li>✓ Full day coverage</li>
-                        <li>✓ Professional editing</li>
-                        <li>✓ Online gallery</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card featured">
-                    <div class="featured-badge">Popular</div>
-                    <div class="service-icon">❤️</div>
-                    <h3 class="service-title">Engagement Sessions</h3>
-                    <p class="service-description">Celebrate your love story with romantic couple photography in beautiful Toronto locations.</p>
-                    <div class="service-price">From $350</div>
-                    <ul class="service-features">
-                        <li>✓ 1-2 hour session</li>
-                        <li>✓ Location scouting</li>
-                        <li>✓ Digital images</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">📸</div>
-                    <h3 class="service-title">Portrait Photography</h3>
-                    <p class="service-description">Professional portraits that showcase your personality and style for individuals and families.</p>
-                    <div class="service-price">From $250</div>
-                    <ul class="service-features">
-                        <li>✓ Studio or outdoor</li>
-                        <li>✓ Multiple outfits</li>
-                        <li>✓ Retouched photos</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🎉</div>
-                    <h3 class="service-title">Event Photography</h3>
-                    <p class="service-description">Coverage for birthdays, corporate events, and special celebrations with candid moments.</p>
-                    <div class="service-price">From $400</div>
-                    <ul class="service-features">
-                        <li>✓ Event coverage</li>
-                        <li>✓ Candid & posed shots</li>
-                        <li>✓ Quick turnaround</li>
-                    </ul>
-                </div>
-            </div>
+    <section id="services" class="services">
+        <div class="section-header">
+            <span class="section-label">What I Offer</span>
+            <h2 class="section-title">Services</h2>
+            <p class="section-description">
+                Professional photography packages tailored to your unique needs
+            </p>
         </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Client Reviews</span>
-                <h2 class="section-title">What People Say</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-icon">💍</span>
+                <h3 class="service-name">Wedding Photography</h3>
+                <p class="service-description">
+                    Complete wedding day coverage with artistic storytelling, 
+                    capturing every precious moment from preparations to celebration.
+                </p>
+                <div class="service-price">From $800</div>
+                <ul class="service-features">
+                    <li>Full day coverage (8-10 hours)</li>
+                    <li>Professional editing & retouching</li>
+                    <li>Online gallery delivery</li>
+                    <li>High-resolution digital files</li>
+                </ul>
+                <a href="#contact" class="service-link">Book Now →</a>
             </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Sim captured our wedding day perfectly! The photos are absolutely stunning and we couldn't be happier with the results. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <strong>Sarah & Mike</strong>
-                            <span>Wedding in Toronto</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Professional, creative, and so easy to work with. Our family portraits turned out amazing! Worth every penny."</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <strong>The Johnson Family</strong>
-                            <span>Portrait Session</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Sim made us feel so comfortable during our engagement shoot. The photos are beautiful and captured our personalities perfectly."</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <strong>Priya & Raj</strong>
-                            <span>Engagement Session</span>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="service-card">
+                <span class="service-icon">❤️</span>
+                <h3 class="service-name">Engagement Sessions</h3>
+                <p class="service-description">
+                    Romantic couple photography at Toronto's most beautiful locations, 
+                    celebrating your love story with style and authenticity.
+                </p>
+                <div class="service-price">From $350</div>
+                <ul class="service-features">
+                    <li>1-2 hour photo session</li>
+                    <li>Location scouting assistance</li>
+                    <li>50+ edited digital images</li>
+                    <li>Print-ready files included</li>
+                </ul>
+                <a href="#contact" class="service-link">Book Now →</a>
+            </div>
+
+            <div class="service-card">
+                <span class="service-icon">📸</span>
+                <h3 class="service-name">Portrait Photography</h3>
+                <p class="service-description">
+                    Professional portraits that showcase your personality and style, 
+                    perfect for individuals, families, and corporate needs.
+                </p>
+                <div class="service-price">From $250</div>
+                <ul class="service-features">
+                    <li>Studio or outdoor sessions</li>
+                    <li>Multiple outfit changes</li>
+                    <li>Professional retouching</li>
+                    <li>Same-week delivery</li>
+                </ul>
+                <a href="#contact" class="service-link">Book Now →</a>
+            </div>
+
+            <div class="service-card">
+                <span class="service-icon">🎉</span>
+                <h3 class="service-name">Event Photography</h3>
+                <p class="service-description">
+                    Comprehensive coverage for birthdays, corporate events, and 
+                    special celebrations with candid and posed photography.
+                </p>
+                <div class="service-price">From $400</div>
+                <ul class="service-features">
+                    <li>Flexible hourly packages</li>
+                    <li>Candid & group photos</li>
+                    <li>Quick turnaround (48-72 hours)</li>
+                    <li>Unlimited digital downloads</li>
+                </ul>
+                <a href="#contact" class="service-link">Book Now →</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Create Together</h2>
+                <p class="section-description">
+                    Ready to book your photography session? I'd love to hear about 
+                    your vision and bring it to life through stunning imagery.
+                </p>
+            </div>
+
             <div class="contact-grid">
-                <div class="contact-info-section">
-                    <span class="section-label">Get In Touch</span>
-                    <h2 class="section-title">Let's Create Together</h2>
-                    <p class="contact-description">Ready to book your photography session? I'd love to hear about your vision and help bring it to life.</p>
-                    
-                    <div class="contact-methods">
-                        <a href="tel:+16473546822" class="contact-method">
-                            <div class="method-icon">📱</div>
-                            <div class="method-info">
-                                <span class="method-label">Phone</span>
-                                <span class="method-value">+1 (647) 354-6822</span>
-                            </div>
-                        </a>
-                        
-                        <a href="mailto:info@capturebyhs.ca" class="contact-method">
-                            <div class="method-icon">📧</div>
-                            <div class="method-info">
-                                <span class="method-label">Email</span>
-                                <span class="method-value">info@capturebyhs.ca</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://wa.me/16473546822" target="_blank" class="contact-method">
-                            <div class="method-icon">💬</div>
-                            <div class="method-info">
-                                <span class="method-label">WhatsApp</span>
-                                <span class="method-value">Message Me</span>
-                            </div>
-                        </a>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">📍</div>
-                            <div class="method-info">
-                                <span class="method-label">Location</span>
-                                <span class="method-value">Toronto, Canada</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://instagram.com/capturebyhs" target="_blank" class="social-link">
-                            <span>📷</span>
-                        </a>
-                        <a href="https://facebook.com/capturebyhs" target="_blank" class="social-link">
-                            <span>📘</span>
-                        </a>
-                        <a href="mailto:info@capturebyhs.ca" class="social-link">
-                            <span>✉️</span>
-                        </a>
-                    </div>
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <div class="contact-label">Email</div>
+                    <a href="mailto:info@capturebyhs.ca" class="contact-value">info@capturebyhs.ca</a>
                 </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">📱</span>
+                    <div class="contact-label">Phone</div>
+                    <a href="tel:+16473546822" class="contact-value">+1 (647) 354-6822</a>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <div class="contact-label">WhatsApp</div>
+                    <a href="https://wa.me/16473546822" class="contact-value">Message Me</a>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">📍</span>
+                    <div class="contact-label">Location</div>
+                    <div class="contact-value" style="cursor: default;">Toronto, Canada</div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com/capturebyhs" class="social-link" aria-label="Instagram">📷</a>
+                <a href="https://facebook.com/capturebyhs" class="social-link" aria-label="Facebook">📘</a>
+                <a href="mailto:info@capturebyhs.ca" class="social-link" aria-label="Email">✉️</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="Logo.jpg" alt="Capture by HS" class="footer-logo">
-                    <p class="footer-tagline">Professional Photography in Toronto</p>
-                </div>
-                
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="Logo.jpg" alt="Capture by HS">
+                <p class="footer-description">
+                    Professional photography services in Toronto, specializing in weddings, 
+                    portraits, and events. Creating timeless memories since 2019.
+                </p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Capture by HS. All rights reserved. | Photography by Sim | Toronto, Canada</p>
+
+            <div>
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
+
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Wedding Photography</a></li>
+                    <li><a href="#services">Engagement Sessions</a></li>
+                    <li><a href="#services">Portrait Photography</a></li>
+                    <li><a href="#services">Event Coverage</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                © 2024 Capture by HS. All rights reserved. | Photography by Sim | Toronto, Canada
+            </p>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+        // ===== NAVIGATION =====
+        const nav = document.querySelector('.navigation');
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // ===== SMOOTH SCROLLING =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== SCROLL TO TOP =====
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ===== CONSOLE MESSAGE =====
+        console.log('%c📸 CAPTURE BY HS', 'font-size: 24px; font-weight: bold; color: #C9A86A; font-family: Cormorant Garamond, serif;');
+        console.log('%c✨ Premium Photography Website', 'font-size: 14px; color: #b8b8b8;');
+        console.log('%c📍 Toronto, Canada | 📧 info@capturebyhs.ca | 📱 +1 (647) 354-6822', 'font-size: 12px; color: #6a6a6a;');
+    </script>
 </body>
 </html>
