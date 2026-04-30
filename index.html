@@ -6,6 +6,9 @@
     <meta name="description" content="Capture by HS - Professional Photography by Sim in Montreal. Specializing in weddings, portraits, and events.">
     <title>Capture by HS | Photography by Sim</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +18,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="camera-icon">📸</div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
     <!-- Header / Navigation -->
     <header id="header">
         <a href="#home" class="logo-container">
@@ -47,10 +58,15 @@
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="subtitle fade-in">Welcome to</p>
-            <h1 class="fade-in-up">Capture by HS</h1>
-            <p class="description fade-in-up">Your moments, beautifully preserved</p>
-            <a href="#portfolio" class="cta-button fade-in-up">View My Work</a>
+            <p class="subtitle">Welcome to</p>
+            <h1>Capture by HS</h1>
+            <p class="description">Your moments, beautifully preserved</p>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow">↓</div>
         </div>
     </section>
 
@@ -63,7 +79,7 @@
         
         <div class="portfolio-grid">
             <div class="portfolio-item" data-category="wedding">
-                <img src="photo1.jpg" alt="Winter Wedding Photography">
+                <img src="photo1.jpg" alt="Winter Wedding Photography" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Winter Romance</h3>
                     <p>Wedding Photography</p>
@@ -71,7 +87,7 @@
             </div>
             
             <div class="portfolio-item" data-category="engagement">
-                <img src="photo2.jpg" alt="Engagement Photography">
+                <img src="photo2.jpg" alt="Engagement Photography" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Vibrant Love</h3>
                     <p>Engagement Session</p>
@@ -79,7 +95,7 @@
             </div>
             
             <div class="portfolio-item" data-category="portrait">
-                <img src="photo4.jpg" alt="Portrait Photography">
+                <img src="photo4.jpg" alt="Portrait Photography" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Style & Elegance</h3>
                     <p>Portrait Session</p>
@@ -87,7 +103,7 @@
             </div>
             
             <div class="portfolio-item" data-category="wedding">
-                <img src="photo3.jpg" alt="Wedding Photography">
+                <img src="photo3.jpg" alt="Wedding Photography" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Perfect Moments</h3>
                     <p>Wedding Day</p>
@@ -100,7 +116,7 @@
     <section id="about" class="about">
         <div class="about-image-wrapper">
             <div class="about-image">
-                <img src="photo4.jpg" alt="Sim - Professional Photographer">
+                <img src="photo4.jpg" alt="Sim - Professional Photographer" loading="lazy">
             </div>
         </div>
         
@@ -113,16 +129,16 @@
             
             <div class="stats">
                 <div class="stat">
-                    <span class="stat-number">50+</span>
+                    <span class="stat-number" data-target="50">0</span>
                     <span class="stat-label">Happy Clients</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">30+</span>
+                    <span class="stat-number" data-target="30">0</span>
                     <span class="stat-label">Events Covered</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Passion</span>
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">Passion %</span>
                 </div>
             </div>
             
@@ -142,24 +158,56 @@
                 <div class="service-icon">💍</div>
                 <h3>Wedding Photography</h3>
                 <p>Capture every beautiful moment of your special day with professional photography that tells your love story.</p>
+                <div class="service-price">Starting at $800</div>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">❤️</div>
                 <h3>Engagement Sessions</h3>
                 <p>Beautiful couple photography in stunning Montreal locations to celebrate your love and journey together.</p>
+                <div class="service-price">Starting at $350</div>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">📸</div>
                 <h3>Portrait Photography</h3>
                 <p>Professional portraits that showcase your personality, perfect for individuals, families, and professionals.</p>
+                <div class="service-price">Starting at $250</div>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">🎉</div>
                 <h3>Event Photography</h3>
                 <p>Coverage for birthdays, parties, and special celebrations with creative and candid photography.</p>
+                <div class="service-price">Starting at $400</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2 class="section-title">What Clients Say</h2>
+            <p class="section-subtitle">Testimonials</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Sim captured our wedding day perfectly! The photos are absolutely stunning and we couldn't be happier."</p>
+                <p class="testimonial-author">- Sarah & Mike</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Professional, creative, and so easy to work with. Our family portraits turned out amazing!"</p>
+                <p class="testimonial-author">- The Johnsons</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Highly recommend! Sim made us feel comfortable and the engagement photos are beautiful."</p>
+                <p class="testimonial-author">- Priya & Raj</p>
             </div>
         </div>
     </section>
@@ -210,6 +258,13 @@
         <img src="Logo.jpg" alt="Capture by HS" class="logo-footer">
         <p>&copy; 2024 Capture by HS | Photography by Sim</p>
         <p class="footer-location">Montreal, Canada</p>
+        <p class="footer-links">
+            <a href="#home">Home</a> | 
+            <a href="#portfolio">Portfolio</a> | 
+            <a href="#about">About</a> | 
+            <a href="#services">Services</a> | 
+            <a href="#contact">Contact</a>
+        </p>
     </footer>
 
     <!-- Scroll to Top Button -->
