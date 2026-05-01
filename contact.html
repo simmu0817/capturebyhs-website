@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Book Your Session | Capture by HS</title>
+    <link rel="icon" href="Logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #C9A86A;
+            --red: #E63946;
+            --green: #2A9D8F;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--primary);
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand img { width: 45px; height: 45px; object-fit: cover; border-radius: 50%; }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #b8b8b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent); }
+
+        .discount-badge {
+            background: var(--red);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 20px;
+        }
+
+        .contact-hero {
+            padding: 12rem 4% 4rem;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            font-size: 1.125rem;
+            color: #b8b8b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 4%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            padding-top: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .info-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-label {
+            color: #888;
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            color: var(--accent);
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .info-value a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .info-value a:hover {
+            color: #fff;
+        }
+
+        .hours {
+            margin-top: 1rem;
+            color: #b8b8b8;
+            font-size: 0.9375rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            background: var(--secondary);
+            padding: 3rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .required {
+            color: var(--red);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(201,168,106,0.2);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.08);
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C9A86A' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 12px;
+            padding-right: 3rem;
+        }
+
+        select option {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        input[type="date"] {
+            position: relative;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            filter: invert(0.8) sepia(1) saturate(5) hue-rotate(10deg);
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #666;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        .submit-btn:hover {
+            background: var(--red);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230,57,70,0.3);
+        }
+
+        .submit-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: var(--green);
+            color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            display: none;
+            border-left: 4px solid #1f7a6e;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+
+        .error-message {
+            background: var(--red);
+            color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            display: none;
+            border-left: 4px solid #c02937;
+        }
+
+        .error-message.show {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-note {
+            color: #888;
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+            background: rgba(201,168,106,0.05);
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="Logo.jpg" alt="Logo" onerror="this.style.display='none'">
+                <span class="brand-name">CAPTURE BY HS</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                <li><a href="pricing-calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><span class="discount-badge">50% OFF</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <h1>Let's Create Together</h1>
+        <p>Ready to book your photography session? Fill out the form below and I'll get back to you within 24 hours!</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2 class="section-title">Get In Touch</h2>
+
+            <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div class="info-label">Email</div>
+                <div class="info-value">
+                    <a href="mailto:info@capturebyhs.ca">info@capturebyhs.ca</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📱</div>
+                <div class="info-label">Phone</div>
+                <div class="info-value">
+                    <a href="tel:+16473546822">+1 (647) 354-6822</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">💬</div>
+                <div class="info-label">WhatsApp</div>
+                <div class="info-value">
+                    <a href="https://wa.me/16473546822">Message Me</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-label">Location</div>
+                <div class="info-value">Toronto, Canada</div>
+                <div class="hours">Serving Toronto and GTA</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">⏰</div>
+                <div class="info-label">Response Time</div>
+                <div class="info-value">Within 24 Hours</div>
+                <div class="hours">Mon-Sat: 9am - 8pm<br>Sun: 10am - 6pm</div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <div class="info-label">Follow Me</div>
+                <div class="social-links">
+                    <a href="https://instagram.com/capturebyhs" class="social-link">📷</a>
+                    <a href="https://facebook.com/capturebyhs" class="social-link">📘</a>
+                    <a href="mailto:info@capturebyhs.ca" class="social-link">✉️</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <div class="success-message" id="successMessage">
+                ✅ <strong>Thank you!</strong> Your message has been sent successfully. I'll get back to you within 24 hours.
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                ❌ <strong>Oops!</strong> There was an error. Please try again or email directly at info@capturebyhs.ca
+            </div>
+
+            <!-- WORKING FORMSUBMIT FORM -->
+            <form action="https://formsubmit.co/info@capturebyhs.ca" method="POST" id="contactForm">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="📸 New Photography Inquiry from Website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name <span class="required">*</span></label>
+                        <input type="text" name="First Name" required placeholder="John">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name <span class="required">*</span></label>
+                        <input type="text" name="Last Name" required placeholder="Smith">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="Email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone <span class="required">*</span></label>
+                        <input type="tel" name="Phone" required placeholder="(647) 555-1234">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Package Interest <span class="required">*</span></label>
+                    <select name="Package Interest" required>
+                        <option value="" disabled selected>Select a package...</option>
+                        <option value="Wedding Photography - $800">💍 Wedding Photography - $800</option>
+                        <option value="Engagement Session - $350">❤️ Engagement Session - $350</option>
+                        <option value="Portrait Photography - $250">📸 Portrait Photography - $250</option>
+                        <option value="Event Photography - $400">🎉 Event Photography - $400</option>
+                        <option value="Custom Package">💎 Custom Package</option>
+                        <option value="Just Browsing">👀 Just Browsing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Event/Session Date</label>
+                    <input type="date" name="Event Date" min="2024-01-01">
+                </div>
+
+                <div class="form-group">
+                    <label>How did you hear about us?</label>
+                    <select name="Referral Source">
+                        <option value="" disabled selected>Select one...</option>
+                        <option value="Google Search">🔍 Google Search</option>
+                        <option value="Instagram">📷 Instagram</option>
+                        <option value="Facebook">📘 Facebook</option>
+                        <option value="Friend/Family Referral">👥 Friend/Family Referral</option>
+                        <option value="Wedding Vendor">💐 Wedding Vendor</option>
+                        <option value="Other">💭 Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Message <span class="required">*</span></label>
+                    <textarea name="Message" required placeholder="Tell me about your photography needs, vision, location preferences, or any questions you have..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+
+                <div class="form-note">
+                    🔒 Your information is secure and will only be used to contact you about your photography inquiry.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Optional: Add loading state
+        form.addEventListener('submit', function() {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+        });
+
+        // Check if redirected back with success
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            successMessage.classList.add('show');
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Clear form if needed
+            form.reset();
+        }
+
+        console.log('%c📧 Contact Form Ready', 'font-size: 16px; color: #C9A86A; font-weight: bold;');
+        console.log('%c✅ FormSubmit Integration Active', 'color: #2A9D8F; font-size: 14px;');
+        console.log('%c📨 Forms will be sent to: info@capturebyhs.ca', 'color: #b8b8b8; font-size: 12px;');
+    </script>
+</body>
+</html>
