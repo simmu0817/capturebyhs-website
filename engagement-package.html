@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement Photography Package - 50% OFF | Capture by HS</title>
+    <link rel="icon" href="Logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #C9A86A;
+            --red: #E63946;
+            --green: #2A9D8F;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--primary);
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand img { width: 45px; height: 45px; }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #b8b8b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent); }
+
+        .discount-badge {
+            background: var(--red);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 20px;
+        }
+
+        .package-hero {
+            padding: 12rem 4% 6rem;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        .package-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-display {
+            margin: 2rem 0;
+        }
+
+        .original { 
+            text-decoration: line-through;
+            color: #666;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+
+        .discount {
+            font-size: 4rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .save-badge {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .package-details {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4%;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .included-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .included-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .check {
+            color: var(--green);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .bonus {
+            background: var(--secondary);
+            padding: 2rem;
+            border-left: 3px solid var(--accent);
+            margin: 2rem 0;
+        }
+
+        .bonus-title {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .sidebar {
+            background: var(--secondary);
+            padding: 2.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 1rem 0;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .guarantee {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #b8b8b8;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 1024px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="Logo.jpg" alt="Logo" onerror="this.style.display='none'">
+                <span class="brand-name">CAPTURE BY HS</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                <li><a href="pricing-calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><span class="discount-badge">50% OFF</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="package-hero">
+        <a href="index.html#packages" class="back-link">← Back to All Packages</a>
+        <h1>❤️ Engagement Session</h1>
+        <p style="font-size: 1.25rem; color: #b8b8b8; margin-bottom: 2rem;">
+            Beautiful couple photography at stunning Toronto locations
+        </p>
+        
+        <div class="price-display">
+            <span class="original">$700</span>
+            <span class="discount">$350</span>
+        </div>
+        <div class="save-badge">🎉 SAVE $350 - LIMITED TIME OFFER</div>
+        <p style="color: #666; font-size: 0.875rem; margin-top: 1.5rem; font-style: italic;">
+            * All rates are subject to change based on specific requirements and customization needs
+        </p>
+    </section>
+
+    <section class="package-details">
+        <div class="details-grid">
+            <div>
+                <h2 class="section-title">What's Included</h2>
+                
+                <ul class="included-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>1-2 Hour Photo Session</strong><br>
+                            <span style="color: #b8b8b8;">Relaxed session at 1-2 beautiful Toronto locations of your choice</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>75+ Professionally Edited Photos</strong><br>
+                            <span style="color: #b8b8b8;">High-resolution images with color grading and retouching</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Location Scouting & Recommendations</strong><br>
+                            <span style="color: #b8b8b8;">Expert suggestions for the most photogenic spots in Toronto</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Outfit Change Allowed</strong><br>
+                            <span style="color: #b8b8b8;">Bring 2-3 outfit options for variety in your photos</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Online Private Gallery</strong><br>
+                            <span style="color: #b8b8b8;">Share your photos with family & friends easily</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>All High-Resolution Digital Files</strong><br>
+                            <span style="color: #b8b8b8;">Full print rights - use for save-the-dates, invitations, prints</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>1-Week Fast Delivery</strong><br>
+                            <span style="color: #b8b8b8;">Get your edited photos in just 7 days</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Planning & Styling Tips</strong><br>
+                            <span style="color: #b8b8b8;">Guidance on what to wear and how to prepare</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="bonus">
+                    <div class="bonus-title">🎁 EXCLUSIVE BONUSES (Worth $200)</div>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0;">✨ 5 Premium Prints (8x10") - Perfect for framing</li>
+                        <li style="padding: 0.5rem 0;">✨ Custom Save-the-Date Template Design</li>
+                        <li style="padding: 0.5rem 0;">✨ FREE Smartphone-Optimized Photos for Social Media</li>
+                        <li style="padding: 0.5rem 0;">✨ Sunset/Golden Hour Time Slot (when available)</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 4rem;">Perfect For</h2>
+                <p style="color: #b8b8b8; line-height: 1.8;">
+                    Newly engaged couples who want to celebrate their love with beautiful photos. 
+                    Perfect for save-the-date cards, wedding invitations, or just capturing this 
+                    special time in your relationship. Also ideal for anniversary sessions or 
+                    couples wanting updated professional photos together.
+                </p>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Popular Toronto Locations</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;">We'll help you choose the perfect backdrop:</p>
+                    <ul style="padding-left: 2rem; margin: 1rem 0;">
+                        <li style="padding: 0.5rem 0;">🌆 <strong>Downtown Toronto:</strong> CN Tower, Distillery District, Union Station</li>
+                        <li style="padding: 0.5rem 0;">🌳 <strong>Parks & Nature:</strong> High Park, Toronto Islands, Evergreen Brick Works</li>
+                        <li style="padding: 0.5rem 0;">🏛️ <strong>Architectural:</strong> ROM, Casa Loma, Yorkville</li>
+                        <li style="padding: 0.5rem 0;">🌅 <strong>Waterfront:</strong> Harbourfront, Beaches, Sugar Beach</li>
+                        <li style="padding: 0.5rem 0;">🎨 <strong>Urban/Artistic:</strong> Graffiti Alley, Kensington Market, Queen West</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Add-Ons Available</h2>
+                <ul class="included-list">
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Extended Session (3 hours): $200</strong><br>
+                            <span style="color: #b8b8b8;">More time, more locations, 120+ photos</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Additional Location: $100</strong><br>
+                            <span style="color: #b8b8b8;">Add a third location to your session</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Pet Inclusion: $75</strong><br>
+                            <span style="color: #b8b8b8;">Bring your furry family member along</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Canvas Print (16x20"): $120</strong><br>
+                            <span style="color: #b8b8b8;">Gallery-wrapped ready to hang</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="section-title" style="margin-top: 3rem;">What to Expect</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p><strong>Before:</strong> We'll have a consultation call to discuss locations, outfits, and your vision. I'll send you a detailed preparation guide.</p>
+                    <p style="margin-top: 1rem;"><strong>During:</strong> The session is relaxed and fun! I'll guide you through natural poses while capturing candid moments. No awkwardness, just genuine connection.</p>
+                    <p style="margin-top: 1rem;"><strong>After:</strong> Within 7 days, you'll receive a private online gallery with all your photos, ready to download and share.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div style="text-align: center;">
+                    <h3 style="margin-bottom: 1.5rem;">Ready to Book?</h3>
+                    <p style="color: #b8b8b8; margin-bottom: 2rem; font-size: 0.9375rem;">
+                        Reserve your session today. Perfect for weekends or golden hour!
+                    </p>
+                    
+                    <a href="mailto:info@capturebyhs.ca?subject=Engagement Session Booking" class="btn">Book Now - $350</a>
+                    <a href="tel:+16473546822" class="btn" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">Call: (647) 354-6822</a>
+                    
+                    <div class="guarantee">
+                        <strong style="color: var(--accent);">100% Satisfaction Guarantee</strong><br>
+                        Love your photos or we'll re-shoot for free
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Session Details</h4>
+                    <ul style="list-style: none; color: #b8b8b8; font-size: 0.875rem;">
+                        <li style="padding: 0.5rem 0;">⏰ 1-2 hours duration</li>
+                        <li style="padding: 0.5rem 0;">📍 1-2 Toronto locations</li>
+                        <li style="padding: 0.5rem 0;">📸 75+ edited photos</li>
+                        <li style="padding: 0.5rem 0;">⚡ 7-day delivery</li>
+                        <li style="padding: 0.5rem 0;">💝 Print rights included</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Best Times</h4>
+                    <p style="color: #b8b8b8; font-size: 0.875rem; line-height: 1.6;">
+                        <strong>Golden Hour:</strong> 1 hour before sunset for magical lighting<br>
+                        <strong>Overcast Days:</strong> Soft, flattering light perfect for portraits<br>
+                        <strong>Weekdays:</strong> Less crowded locations
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        console.log('%c❤️ Engagement Package - 50% OFF', 'font-size: 16px; color: #C9A86A; font-weight: bold;');
+    </script>
+</body>
+</html>

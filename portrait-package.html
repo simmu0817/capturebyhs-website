@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait Photography Package - 50% OFF | Capture by HS</title>
+    <link rel="icon" href="Logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #C9A86A;
+            --red: #E63946;
+            --green: #2A9D8F;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--primary);
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand img { width: 45px; height: 45px; }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #b8b8b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent); }
+
+        .discount-badge {
+            background: var(--red);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 20px;
+        }
+
+        .package-hero {
+            padding: 12rem 4% 6rem;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        .package-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-display {
+            margin: 2rem 0;
+        }
+
+        .original { 
+            text-decoration: line-through;
+            color: #666;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+
+        .discount {
+            font-size: 4rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .save-badge {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .package-details {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4%;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .included-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .included-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .check {
+            color: var(--green);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .bonus {
+            background: var(--secondary);
+            padding: 2rem;
+            border-left: 3px solid var(--accent);
+            margin: 2rem 0;
+        }
+
+        .bonus-title {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .sidebar {
+            background: var(--secondary);
+            padding: 2.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 1rem 0;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .guarantee {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #b8b8b8;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 1024px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="Logo.jpg" alt="Logo" onerror="this.style.display='none'">
+                <span class="brand-name">CAPTURE BY HS</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                <li><a href="pricing-calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><span class="discount-badge">50% OFF</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="package-hero">
+        <a href="index.html#packages" class="back-link">← Back to All Packages</a>
+        <h1>📸 Portrait Photography</h1>
+        <p style="font-size: 1.25rem; color: #b8b8b8; margin-bottom: 2rem;">
+            Professional portraits for individuals, families, and professionals
+        </p>
+        
+        <div class="price-display">
+            <span class="original">$500</span>
+            <span class="discount">$250</span>
+        </div>
+        <div class="save-badge">🎉 SAVE $250 - LIMITED TIME OFFER</div>
+        <p style="color: #666; font-size: 0.875rem; margin-top: 1.5rem; font-style: italic;">
+            * All rates are subject to change based on specific requirements and customization needs
+        </p>
+    </section>
+
+    <section class="package-details">
+        <div class="details-grid">
+            <div>
+                <h2 class="section-title">What's Included</h2>
+                
+                <ul class="included-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>1 Hour Photo Session</strong><br>
+                            <span style="color: #b8b8b8;">Studio or outdoor location - your choice for perfect lighting</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>50+ Professionally Edited Photos</strong><br>
+                            <span style="color: #b8b8b8;">High-resolution images with professional retouching and color correction</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Multiple Outfit Changes (Up to 3)</strong><br>
+                            <span style="color: #b8b8b8;">Bring different looks for variety in your final gallery</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Professional Posing Direction</strong><br>
+                            <span style="color: #b8b8b8;">Expert guidance to look your best - no awkward poses!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Studio or Outdoor Options</strong><br>
+                            <span style="color: #b8b8b8;">Clean studio backdrop or beautiful Toronto outdoor locations</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Advanced Retouching</strong><br>
+                            <span style="color: #b8b8b8;">Skin smoothing, blemish removal, teeth whitening included</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>All High-Resolution Digital Files</strong><br>
+                            <span style="color: #b8b8b8;">Full commercial rights - use for LinkedIn, business cards, websites</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Same-Week Delivery (3-5 days)</strong><br>
+                            <span style="color: #b8b8b8;">Fast turnaround for urgent professional needs</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Pre-Session Consultation</strong><br>
+                            <span style="color: #b8b8b8;">Discuss your goals and get styling recommendations</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="bonus">
+                    <div class="bonus-title">🎁 EXCLUSIVE BONUSES (Worth $180)</div>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0;">✨ 3 Premium Prints (8x10") - Perfect for your home or office</li>
+                        <li style="padding: 0.5rem 0;">✨ LinkedIn-Optimized Headshot Versions</li>
+                        <li style="padding: 0.5rem 0;">✨ Black & White Versions of All Photos</li>
+                        <li style="padding: 0.5rem 0;">✨ FREE Touch-Up on 5 Additional Photos of Your Choice</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 4rem;">Perfect For</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;"><strong>Professionals:</strong> LinkedIn headshots, business profiles, author photos, corporate materials, personal branding</p>
+                    <p style="margin-bottom: 1rem;"><strong>Individuals:</strong> Dating profile pictures, social media content, portfolio shots, graduation portraits</p>
+                    <p style="margin-bottom: 1rem;"><strong>Families:</strong> Family portraits, milestone celebrations, holiday cards, generational photos</p>
+                    <p style="margin-bottom: 1rem;"><strong>Actors/Models:</strong> Headshots, comp cards, portfolio building</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Session Styles</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                    <div style="background: var(--secondary); padding: 2rem; border-left: 3px solid var(--accent);">
+                        <h4 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.125rem;">Studio Session</h4>
+                        <ul style="color: #b8b8b8; list-style: none; font-size: 0.9375rem;">
+                            <li style="padding: 0.25rem 0;">• Clean, professional backgrounds</li>
+                            <li style="padding: 0.25rem 0;">• Controlled lighting setup</li>
+                            <li style="padding: 0.25rem 0;">• Weather-independent</li>
+                            <li style="padding: 0.25rem 0;">• Perfect for headshots</li>
+                            <li style="padding: 0.25rem 0;">• Multiple backdrop options</li>
+                        </ul>
+                    </div>
+                    <div style="background: var(--secondary); padding: 2rem; border-left: 3px solid var(--accent);">
+                        <h4 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.125rem;">Outdoor Session</h4>
+                        <ul style="color: #b8b8b8; list-style: none; font-size: 0.9375rem;">
+                            <li style="padding: 0.25rem 0;">• Natural, beautiful settings</li>
+                            <li style="padding: 0.25rem 0;">• Toronto's best locations</li>
+                            <li style="padding: 0.25rem 0;">• Golden hour lighting</li>
+                            <li style="padding: 0.25rem 0;">• More casual, relaxed feel</li>
+                            <li style="padding: 0.25rem 0;">• Seasonal backdrops</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Add-Ons Available</h2>
+                <ul class="included-list">
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Extended Session (2 hours): $150</strong><br>
+                            <span style="color: #b8b8b8;">More time for wardrobe changes and location variety</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Hair & Makeup Artist: $200</strong><br>
+                            <span style="color: #b8b8b8;">Professional styling for camera-ready look</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Additional Family Members: $50 each</strong><br>
+                            <span style="color: #b8b8b8;">Add spouse, children, or extended family</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Rush Delivery (24 hours): $100</strong><br>
+                            <span style="color: #b8b8b8;">Next-day delivery for urgent needs</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Printed Photo Album: $150</strong><br>
+                            <span style="color: #b8b8b8;">20-page professional album with your best shots</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="section-title" style="margin-top: 3rem;">What to Wear</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;"><strong>Professional/Business:</strong> Solid colors work best (navy, gray, black, white). Avoid busy patterns. Bring a jacket for variety.</p>
+                    <p style="margin-bottom: 1rem;"><strong>Casual/Creative:</strong> Express your personality! Textures and layers add visual interest. Comfort is key.</p>
+                    <p style="margin-bottom: 1rem;"><strong>Family:</strong> Coordinate colors (not matching). Choose a color palette with 2-3 complementary colors.</p>
+                    <p style="margin-bottom: 1rem;"><em>I'll send you a detailed style guide after booking with specific tips for your session type!</em></p>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Session Timeline</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p><strong>Day 1:</strong> Book your session and receive style guide</p>
+                    <p style="margin-top: 0.5rem;"><strong>Session Day:</strong> 1-hour relaxed photo shoot</p>
+                    <p style="margin-top: 0.5rem;"><strong>Days 2-3:</strong> Photo selection and editing</p>
+                    <p style="margin-top: 0.5rem;"><strong>Days 3-5:</strong> Receive your complete gallery with 50+ edited photos</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div style="text-align: center;">
+                    <h3 style="margin-bottom: 1.5rem;">Ready to Book?</h3>
+                    <p style="color: #b8b8b8; margin-bottom: 2rem; font-size: 0.9375rem;">
+                        Perfect for professionals, families, and anyone wanting updated portraits.
+                    </p>
+                    
+                    <a href="mailto:info@capturebyhs.ca?subject=Portrait Photography Booking" class="btn">Book Now - $250</a>
+                    <a href="tel:+16473546822" class="btn" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">Call: (647) 354-6822</a>
+                    
+                    <div class="guarantee">
+                        <strong style="color: var(--accent);">100% Satisfaction Guarantee</strong><br>
+                        Not happy with your photos? We'll re-shoot for free.
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Session Details</h4>
+                    <ul style="list-style: none; color: #b8b8b8; font-size: 0.875rem;">
+                        <li style="padding: 0.5rem 0;">⏰ 1 hour session</li>
+                        <li style="padding: 0.5rem 0;">📸 50+ edited photos</li>
+                        <li style="padding: 0.5rem 0;">👔 Up to 3 outfit changes</li>
+                        <li style="padding: 0.5rem 0;">⚡ 3-5 day delivery</li>
+                        <li style="padding: 0.5rem 0;">🏢 Studio or outdoor</li>
+                        <li style="padding: 0.5rem 0;">✨ Professional retouching</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Popular For</h4>
+                    <ul style="list-style: none; color: #b8b8b8; font-size: 0.875rem;">
+                        <li style="padding: 0.5rem 0;">💼 LinkedIn headshots</li>
+                        <li style="padding: 0.5rem 0;">👨‍👩‍👧‍👦 Family portraits</li>
+                        <li style="padding: 0.5rem 0;">🎓 Graduation photos</li>
+                        <li style="padding: 0.5rem 0;">💝 Gift portraits</li>
+                        <li style="padding: 0.5rem 0;">📱 Social media content</li>
+                        <li style="padding: 0.5rem 0;">🎭 Actor headshots</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Client Testimonial</h4>
+                    <p style="color: #b8b8b8; font-size: 0.875rem; line-height: 1.6; font-style: italic;">
+                        "Sim made me feel so comfortable during the shoot. I'm not photogenic but these photos turned out amazing! Got so many compliments on LinkedIn."
+                    </p>
+                    <p style="color: var(--accent); margin-top: 0.5rem; font-size: 0.875rem;">- Sarah M., Marketing Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        console.log('%c📸 Portrait Package - 50% OFF', 'font-size: 16px; color: #C9A86A; font-weight: bold;');
+    </script>
+</body>
+</html>

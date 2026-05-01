@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Photography Package - 50% OFF | Capture by HS</title>
+    <link rel="icon" href="Logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #C9A86A;
+            --red: #E63946;
+            --green: #2A9D8F;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--primary);
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand img { width: 45px; height: 45px; }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #b8b8b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent); }
+
+        .discount-badge {
+            background: var(--red);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 20px;
+        }
+
+        .package-hero {
+            padding: 12rem 4% 6rem;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        .package-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-display {
+            margin: 2rem 0;
+        }
+
+        .original { 
+            text-decoration: line-through;
+            color: #666;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+
+        .discount {
+            font-size: 4rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .save-badge {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .package-details {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4%;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .included-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .included-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .check {
+            color: var(--green);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .bonus {
+            background: var(--secondary);
+            padding: 2rem;
+            border-left: 3px solid var(--accent);
+            margin: 2rem 0;
+        }
+
+        .bonus-title {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .sidebar {
+            background: var(--secondary);
+            padding: 2.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 1rem 0;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .guarantee {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #b8b8b8;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 1024px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="Logo.jpg" alt="Logo" onerror="this.style.display='none'">
+                <span class="brand-name">CAPTURE BY HS</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                <li><a href="pricing-calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><span class="discount-badge">50% OFF</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="package-hero">
+        <a href="index.html#packages" class="back-link">← Back to All Packages</a>
+        <h1>🎉 Event Photography</h1>
+        <p style="font-size: 1.25rem; color: #b8b8b8; margin-bottom: 2rem;">
+            Professional coverage for birthdays, parties, and special celebrations
+        </p>
+        
+        <div class="price-display">
+            <span class="original">$800</span>
+            <span class="discount">$400</span>
+        </div>
+        <div class="save-badge">🎉 SAVE $400 - LIMITED TIME OFFER</div>
+        <p style="color: #666; font-size: 0.875rem; margin-top: 1.5rem; font-style: italic;">
+            * All rates are subject to change based on specific requirements and customization needs
+        </p>
+    </section>
+
+    <section class="package-details">
+        <div class="details-grid">
+            <div>
+                <h2 class="section-title">What's Included</h2>
+                
+                <ul class="included-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>4 Hours of Event Coverage</strong><br>
+                            <span style="color: #b8b8b8;">Comprehensive documentation of your special celebration</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>300+ Professionally Edited Photos</strong><br>
+                            <span style="color: #b8b8b8;">High-resolution images with color correction and enhancement</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Candid & Posed Photography</strong><br>
+                            <span style="color: #b8b8b8;">Natural moments plus organized group shots</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Pre-Event Consultation</strong><br>
+                            <span style="color: #b8b8b8;">Discuss timeline, key moments, and must-have shots</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Detail & Decor Photography</strong><br>
+                            <span style="color: #b8b8b8;">Capture your venue setup, decorations, and special touches</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Online Private Gallery</strong><br>
+                            <span style="color: #b8b8b8;">Easy sharing with guests - download, share, and order prints</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>All High-Resolution Digital Files</strong><br>
+                            <span style="color: #b8b8b8;">Unlimited downloads with full print rights</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Quick Turnaround (48-72 hours)</strong><br>
+                            <span style="color: #b8b8b8;">Get your photos while the memories are fresh!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <div>
+                            <strong>Highlight Slideshow Video</strong><br>
+                            <span style="color: #b8b8b8;">30-60 second recap video perfect for social media</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="bonus">
+                    <div class="bonus-title">🎁 EXCLUSIVE BONUSES (Worth $250)</div>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0;">✨ FREE Same-Day Sneak Peek (10 photos within 12 hours)</li>
+                        <li style="padding: 0.5rem 0;">✨ Guest Photo Sharing Instructions Card</li>
+                        <li style="padding: 0.5rem 0;">✨ Social Media Optimized Versions</li>
+                        <li style="padding: 0.5rem 0;">✨ 10 Premium Prints (5x7") - Perfect party favors</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 4rem;">Perfect For</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;">🎂 Birthday Parties</h4>
+                        <ul style="color: #b8b8b8; list-style: none; font-size: 0.9375rem;">
+                            <li style="padding: 0.25rem 0;">• Milestone birthdays (1st, 16th, 21st, 50th, etc.)</li>
+                            <li style="padding: 0.25rem 0;">• Kids' birthday parties</li>
+                            <li style="padding: 0.25rem 0;">• Adult celebrations</li>
+                            <li style="padding: 0.25rem 0;">• Surprise parties</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;">🎊 Corporate Events</h4>
+                        <ul style="color: #b8b8b8; list-style: none; font-size: 0.9375rem;">
+                            <li style="padding: 0.25rem 0;">• Company parties & galas</li>
+                            <li style="padding: 0.25rem 0;">• Product launches</li>
+                            <li style="padding: 0.25rem 0;">• Team building events</li>
+                            <li style="padding: 0.25rem 0;">• Award ceremonies</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;">🎓 Special Occasions</h4>
+                        <ul style="color: #b8b8b8; list-style: none; font-size: 0.9375rem;">
+                            <li style="padding: 0.25rem 0;">• Graduation parties</li>
+                            <li style="padding: 0.25rem 0;">• Baby showers</li>
+                            <li style="padding: 0.25rem 0;">• Bridal showers</li>
+                            <li style="padding: 0.25rem 0;">• Retirement celebrations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;">🎉 Other Events</h4>
+                        <ul style="color: #b8b8b8; list-style: none; font-size: 0.9375rem;">
+                            <li style="padding: 0.25rem 0;">• Holiday parties</li>
+                            <li style="padding: 0.25rem 0;">• Charity fundraisers</li>
+                            <li style="padding: 0.25rem 0;">• Family reunions</li>
+                            <li style="padding: 0.25rem 0;">• Cultural celebrations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Coverage Includes</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;">📸 <strong>Arrival & Setup:</strong> Venue details, decorations, and atmosphere before guests arrive</p>
+                    <p style="margin-bottom: 1rem;">👥 <strong>Guest Arrivals:</strong> Capturing the excitement as people arrive and mingle</p>
+                    <p style="margin-bottom: 1rem;">🎂 <strong>Key Moments:</strong> Cake cutting, toasts, speeches, award presentations, special performances</p>
+                    <p style="margin-bottom: 1rem;">💃 <strong>Activities:</strong> Dancing, games, entertainment, interactions</p>
+                    <p style="margin-bottom: 1rem;">😊 <strong>Candid Moments:</strong> Genuine laughter, conversations, and emotions</p>
+                    <p style="margin-bottom: 1rem;">📷 <strong>Group Photos:</strong> Organized shots with family, friends, or colleagues</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Flexible Hourly Options</h2>
+                <ul class="included-list">
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Additional Hours: $100/hour</strong><br>
+                            <span style="color: #b8b8b8;">Extend coverage beyond 4 hours</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>2-Hour Mini Package: $250 (50% OFF from $500)</strong><br>
+                            <span style="color: #b8b8b8;">Perfect for smaller gatherings - 150+ photos</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Full Day Coverage (8 hours): $700 (50% OFF from $1,400)</strong><br>
+                            <span style="color: #b8b8b8;">Complete event documentation - 600+ photos</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Add-Ons Available</h2>
+                <ul class="included-list">
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Photo Booth Setup: $300</strong><br>
+                            <span style="color: #b8b8b8;">Professional backdrop, props, instant prints for guests</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Second Photographer: $200</strong><br>
+                            <span style="color: #b8b8b8;">Capture multiple perspectives simultaneously</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Videography: $400</strong><br>
+                            <span style="color: #b8b8b8;">Full event video with highlights reel</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Same-Day Editing: $150</strong><br>
+                            <span style="color: #b8b8b8;">Get all photos within 24 hours</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check">+</span>
+                        <div>
+                            <strong>Guest Book Album: $200</strong><br>
+                            <span style="color: #b8b8b8;">Premium album with space for guest signatures</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Why Choose Event Photography?</h2>
+                <div style="color: #b8b8b8; line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;">✨ <strong>Preserve Memories:</strong> You can't be everywhere at once. Professional photography captures moments you might miss while hosting.</p>
+                    <p style="margin-bottom: 1rem;">🎯 <strong>Quality Matters:</strong> Phone photos are great, but professional equipment and expertise create stunning, shareable results.</p>
+                    <p style="margin-bottom: 1rem;">⏰ <strong>Save Time:</strong> No need to chase guests for their photos afterward - everything is in one beautiful gallery.</p>
+                    <p style="margin-bottom: 1rem;">💝 <strong>Thoughtful Gift:</strong> Event photos make perfect thank-you gifts for guests or milestone keepsakes.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div style="text-align: center;">
+                    <h3 style="margin-bottom: 1.5rem;">Ready to Book?</h3>
+                    <p style="color: #b8b8b8; margin-bottom: 2rem; font-size: 0.9375rem;">
+                        Limited availability. Book early to secure your date!
+                    </p>
+                    
+                    <a href="mailto:info@capturebyhs.ca?subject=Event Photography Booking" class="btn">Book Now - $400</a>
+                    <a href="tel:+16473546822" class="btn" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">Call: (647) 354-6822</a>
+                    
+                    <div class="guarantee">
+                        <strong style="color: var(--accent);">100% Satisfaction Guarantee</strong><br>
+                        Professional results or your money back
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Package Details</h4>
+                    <ul style="list-style: none; color: #b8b8b8; font-size: 0.875rem;">
+                        <li style="padding: 0.5rem 0;">⏰ 4 hours coverage</li>
+                        <li style="padding: 0.5rem 0;">📸 300+ edited photos</li>
+                        <li style="padding: 0.5rem 0;">⚡ 48-72 hour delivery</li>
+                        <li style="padding: 0.5rem 0;">🎬 Highlight video included</li>
+                        <li style="padding: 0.5rem 0;">📱 Social media versions</li>
+                        <li style="padding: 0.5rem 0;">🖼️ 10 free prints</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Popular Event Types</h4>
+                    <ul style="list-style: none; color: #b8b8b8; font-size: 0.875rem;">
+                        <li style="padding: 0.5rem 0;">🎂 Birthday parties</li>
+                        <li style="padding: 0.5rem 0;">🏢 Corporate events</li>
+                        <li style="padding: 0.5rem 0;">🎓 Graduations</li>
+                        <li style="padding: 0.5rem 0;">👶 Baby showers</li>
+                        <li style="padding: 0.5rem 0;">🎄 Holiday parties</li>
+                        <li style="padding: 0.5rem 0;">🎊 Anniversaries</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">What You Get</h4>
+                    <p style="color: #b8b8b8; font-size: 0.875rem; line-height: 1.6;">
+                        ✓ Professional equipment<br>
+                        ✓ Experienced photographer<br>
+                        ✓ Candid + posed shots<br>
+                        ✓ Detail photography<br>
+                        ✓ Online gallery<br>
+                        ✓ Fast delivery<br>
+                        ✓ All digital files<br>
+                        ✓ Print rights
+                    </p>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(201,168,106,0.1); padding: 1.5rem; margin-left: -2.5rem; margin-right: -2.5rem; margin-bottom: -2.5rem;">
+                    <h4 style="margin-bottom: 1rem; font-size: 1rem; text-align: center; color: var(--accent);">🎉 SPECIAL OFFER</h4>
+                    <p style="color: #b8b8b8; font-size: 0.875rem; text-align: center; line-height: 1.6;">
+                        Book 2+ events and get an additional 10% discount on your total!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        console.log('%c🎉 Event Package - 50% OFF', 'font-size: 16px; color: #C9A86A; font-weight: bold;');
+    </script>
+</body>
+</html>
